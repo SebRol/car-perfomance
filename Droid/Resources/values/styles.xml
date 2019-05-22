@@ -1,0 +1,13 @@
+<resources>
+   <style name="Main" parent="Theme.AppCompat.NoActionBar">
+      <item name="android:colorActivatedHighlight">@android:color/holo_blue_dark</item>
+   </style>
+
+   <style name="Splash" parent="Main">
+      <item name="android:windowBackground">@drawable/layout_splash</item>
+      <item name="android:windowNoTitle">true</item>
+   </style>
+
+   <style name="Crash" parent="Main">
+   </style>
+</resources>
