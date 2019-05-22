@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="perf.PageText"
+             xmlns:custom="clr-namespace:perf;assembly=perf.Droid"
+             BackgroundImage="@drawable/bg_help.png">
+   <ContentPage.Content>
+      <StackLayout Spacing="20">
+         <StackLayout Orientation="Horizontal" VerticalOptions="Start" Margin="18" >
+            <!-- top controls -->
+            <Image Source="@drawable/btn_back.png" x:Name="imgButtonBack" />
+            <custom:CustomLabel x:Name="lblCaption" Size="3" TextColor="#4D4C4A" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+            <Image x:Name="imgButtonHelp" />
+         </StackLayout>
+         <ScrollView VerticalOptions="CenterAndExpand" >
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="30" >
+               <!-- middle controls -->
+					<ScrollView>
+                  <custom:CustomLabel x:Name="lblText" FontSize="25" TextColor="#000000" />
+					</ScrollView>
+            </StackLayout>
+         </ScrollView>
+         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+            <!-- below middle controls -->
+            <custom:CustomLabel x:Name="lblSwitch" TextColor="#000000" Size="4" />
+            <Switch x:Name="tglSwitch" />
+         </StackLayout>
+         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Padding="20">
+            <!-- bottom controls -->
+            <Button x:Name="btnOk" BackgroundColor="Transparent" Clicked="OnButtonOk" />
+         </StackLayout>
+      </StackLayout>
+   </ContentPage.Content>
+</ContentPage>

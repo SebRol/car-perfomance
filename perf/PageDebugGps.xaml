@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="perf.PageDebugGps"
+             BackgroundImage="@drawable/bg_main.png">
+   <ContentPage.Content>
+      <StackLayout VerticalOptions="Center">
+         <Label x:Name="labelHeartBeat" />
+         <Label x:Name="labelLatitude" />
+         <Label x:Name="labelLongitude" />
+         <Label x:Name="labelSpeed" />
+         <Label x:Name="labelDistance" />
+         <Label x:Name="labelProviderStatus" />
+         <Label x:Name="labelGpsStatusSatellitesVisible" />
+         <Label x:Name="labelGpsStatusSatellitesUsedInFix" />
+         <Label x:Name="labelGpsStatusSatellitesWithEphemeris" />
+         <Label x:Name="labelGpsStatusSatellitesWithAlmanac" />
+         <Label x:Name="labelGpsStatusTimeToFirstFix" />
+      </StackLayout>
+   </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="perf.PageConfig"
+             xmlns:custom="clr-namespace:perf;assembly=perf.Droid"
+             BackgroundImage="@drawable/bg_settings.png">
+   <ContentPage.Content>
+      <StackLayout>
+         <StackLayout Orientation="Horizontal" VerticalOptions="Start" Margin="8">
+            <Image Source="@drawable/btn_back.png" x:Name="imgButtonBack" />
+            <custom:CustomLabel x:Name="lblCaption" Size="3" TextColor="#4D4C4A" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+            <Image Source="@drawable/btn_help_settings.png" x:Name="imgButtonHelp" />
+         </StackLayout>
+         <ScrollView>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+               <Button BackgroundColor="Transparent" Clicked="OnButtonLanguage"  x:Name="btnLanguage"  />
+               <Button BackgroundColor="Transparent" Clicked="OnButtonDistance"  x:Name="btnDistance"  />
+               <Button BackgroundColor="Transparent" Clicked="OnButtonSpeedUnit" x:Name="btnSpeedUnit" />
+               <Button BackgroundColor="Transparent" Clicked="OnButtonFilter"    x:Name="btnFilter"    />
+               <Button BackgroundColor="Transparent" Clicked="OnButtonSounds"    x:Name="btnSounds"    />
+               <Button BackgroundColor="Transparent" Clicked="OnButtonTipOfDay"  x:Name="btnTipOfDay"  />
+            </StackLayout>
+         </ScrollView>
+      </StackLayout>
+   </ContentPage.Content>
+</ContentPage>

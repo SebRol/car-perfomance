@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="perf.PageProfile"
+             xmlns:custom="clr-namespace:perf;assembly=perf.Droid"
+             BackgroundImage="@drawable/bg_settings.png">
+
+     <ContentPage.Resources>
+        <ResourceDictionary>
+            <custom:StringToColorConverter x:Key="StringToColorConverter" />
+        </ResourceDictionary>
+     </ContentPage.Resources>
+
+   <ContentPage.Content>
+      <StackLayout Spacing="15">
+         <StackLayout Orientation="Horizontal" VerticalOptions="Start" Margin="8" >
+            <Image Source="@drawable/btn_back.png" x:Name="imgButtonBack" />
+            <custom:CustomLabel x:Name="lblCaption" Size="3" TextColor="#4D4C4A" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+            <Image Source="@drawable/btn_help_profile.png" x:Name="imgButtonHelp" />
+         </StackLayout>
+         <ListView x:Name="ListViewVehicles" RowHeight="58">
+            <ListView.ItemTemplate>
+               <DataTemplate>
+                  <ViewCell>
+                     <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" Spacing="40">
+                           <Label Text=" " />
+                           <custom:CustomIcon Source="@drawable/icn_profile.png" Foreground="{Binding Color, Converter={StaticResource StringToColorConverter}}" />
+                           <custom:CustomLabel Text="{Binding Model}" TextColor="{Binding Color, Converter={StaticResource StringToColorConverter}}" FontSize="40" />
+                           <!---
+                           // the background color of a selected listview item is set in file style.xml (item android:colorActivatedHighlight)
+                           // list of available colors: https://developer.android.com/reference/android/R.color.html
+                           -->
+                        </StackLayout>
+                     </StackLayout>
+                  </ViewCell>
+               </DataTemplate>
+            </ListView.ItemTemplate>
+         </ListView>
+         <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="End">
+            <Button x:Name="btnProfileEdit" Image="@drawable/btn_profile_edit.png" Clicked="OnButtonEdit" BackgroundColor="Transparent" />
+            <Button x:Name="btnProfileCreate" Image="@drawable/btn_profile_create.png" Clicked="OnButtonCreate" BackgroundColor="Transparent" />
+         </StackLayout>
+      </StackLayout>
+   </ContentPage.Content>
+</ContentPage>
