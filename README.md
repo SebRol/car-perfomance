@@ -1,2 +1,2 @@
-# car-perfomance
-A mobile app for measuring the perfomance of cars.
+# car-performance
+A mobile app for measuring the performance of cars.
